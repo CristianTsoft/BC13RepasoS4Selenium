@@ -5,6 +5,13 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../app/src/main">
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/java" isTestSource="false" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/resources" type="java-resource" />
+>>>>>>> aacd6f580a675f2b415e476cdd020753998afecc
+>>>>>>> e0b76f45f77e01a7d4e5c8f9b219dd14a9048ddf
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
