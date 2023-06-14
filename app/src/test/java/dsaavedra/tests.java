@@ -4,7 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+
 
 public class tests {
 
@@ -19,21 +19,21 @@ public class tests {
 
         Thread.sleep(5000);
 
-        //driver.close();
+        driver.close();
 
     }
 
     @Test
-    void levantarBrowserFirefox() throws InterruptedException{
-        WebDriverManager.firefoxdriver().setup();
+    void levantarBrowserChrome() throws InterruptedException{
+        WebDriverManager.chromedriver().setup();
 
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new ChromeDriver();
 
         driver.get("https://selenium.dev");
 
         Thread.sleep(5000);
 
-        //driver.close();
+        driver.close();
 
     }
 }
