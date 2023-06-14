@@ -73,6 +73,6 @@ public class SeleniumBrowserActions {
 
         btnIniciarSesion.click();
 
-        Assertions.assertEquals("Inicia sesión en Spotify",driver.findElement(By.xpath("//h1[contains(text(),'Inicia sesi')]")).getText());
+        Assertions.assertEquals("Inicia sesion en Spotify",driver.findElement(By.xpath("//h1[contains(text(),'Inicia sesi')]")).getText());
     }
 }
