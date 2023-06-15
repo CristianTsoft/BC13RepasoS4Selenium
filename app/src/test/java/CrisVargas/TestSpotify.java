@@ -15,6 +15,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import java.util.concurrent.TimeUnit;
 
 
+
+
 class TestSpotify {
 
 
@@ -64,16 +66,16 @@ class TestSpotify {
 
         driver.get("https://open.spotify.com/");
 
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);   //tiempo que tarda para cargar la pagina principal
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //Tiempo que tarda entre paginas
+
 
 // Maximizar la página
 
         driver.manage().window().maximize();
 
         driver.manage().deleteAllCookies();
-
-
     }
-
 
     @Test
 
@@ -86,16 +88,15 @@ class TestSpotify {
 
         Thread.sleep(10000);
 
-
 // Correo electrónico
 
         WebElement email = driver.findElement(By.xpath("//*[@id=\"email\"]"));
 
-        email.sendKeys("ejemplo@tsoft.com");
+        email.sendKeys("siriloca277722@gmail.com");
 
 // Cerrar cuadro de dialogo de las cookies
 
-        WebElement cache = driver.findElement(By.xpath("//*[@id=\"onetrust-close-btn-container\"]/button"));
+        WebElement cache = driver.findElement(By.xpath("//body/div[@id='onetrust-consent-sdk']/div[@id='onetrust-banner-sdk']/div[1]/div[2]/button[1]"));
 
         cache.click();
 
@@ -104,14 +105,14 @@ class TestSpotify {
 
         WebElement password = driver.findElement(By.xpath("//*[@id=\"password\"]"));
 
-        password.sendKeys("contraseña123");
+        password.sendKeys("contraseña123321");
 
 
 // Usuario
 
         WebElement displayname = driver.findElement(By.xpath("//*[@id=\"displayname\"]"));
 
-        displayname.sendKeys("Bootcamp13");
+        displayname.sendKeys("Usuario00333");
 
 
 // Fecha de nacimiento
@@ -126,9 +127,9 @@ class TestSpotify {
 
         WebElement birthYear = driver.findElement(By.xpath("//*[@id=\"year\"]"));
 
-        birthYear.sendKeys("1999"); // Selecciona el año de nacimiento
+        birthYear.sendKeys("1998"); // Selecciona el año de nacimiento
 
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView()", genero);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", genero); //Scroll de un elemento
         genero.click();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -150,6 +151,7 @@ class TestSpotify {
 // Limpiar el cache del navegador
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
+        //js.executeScript("window.scrollBy(0,500)"); // Scroll por pixeles
 
         js.executeScript("window.localStorage.clear();");
 
