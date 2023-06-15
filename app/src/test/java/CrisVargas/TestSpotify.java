@@ -18,11 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 
 class TestSpotify {
-
-
     WebDriver driver;
-
-
     @FindBy(xpath = "//button[contains(text(),'Reg')]")
 
     WebElement btnRegistrase;
