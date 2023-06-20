@@ -88,7 +88,7 @@ class TestSpotify {
 
         WebElement email = driver.findElement(By.xpath("//*[@id=\"email\"]"));
 
-        email.sendKeys("siriloca277722@gmail.com");
+        email.sendKeys("siriloca273322@gmail.com");
 
 // Cerrar cuadro de dialogo de las cookies
 
