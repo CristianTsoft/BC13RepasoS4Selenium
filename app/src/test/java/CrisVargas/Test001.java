@@ -1,6 +1,5 @@
 package CrisVargas;
 
-import bc13repasos4selenium.App;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -8,13 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
 import java.util.concurrent.TimeUnit;
-import javax.xml.xpath.XPath;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.Keys;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class Test001 {
 
@@ -32,7 +25,7 @@ public class Test001 {
 
 
         driver.get("https://www.mercadolibre.com.ar/"); //levantar sitio Spotify
-        driver.manage().window().maximize();
+        driver.manage().window().maximize(); //Maximizar la pantalla
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
     }
@@ -68,7 +61,7 @@ public class Test001 {
         marcasBtn.click();
 
         //Elige el producto
-        WebElement elementProd = driver.findElement(By.cssSelector("div.ui-search.shops__ui-main div.ui-search-main.ui-search-main--only-products.ui-search-main--with-topkeywords.shops__search-main:nth-child(4) section.ui-search-results.ui-search-results--without-disclaimer.shops__search-results ol.ui-search-layout.ui-search-layout--grid:nth-child(8) li.ui-search-layout__item:nth-child(2) div.ui-search-result__wrapper.shops__result-wrapper div.andes-card.andes-card--flat.andes-card--default.ui-search-result.shops__cardStyles.ui-search-result--core.andes-card--padding-default.andes-card--animated div.ui-search-result__image.shops__picturesStyles section.andes-carousel-snapped__container.andes-carousel-snapped__container--full.andes-carousel-snapped__container--with-controls.andes-carousel-snapped__container--arrows-visible div.andes-carousel-snapped__controls-wrapper div.andes-carousel-snapped.ui-search-result__card.andes-carousel-snapped--scroll-hidden:nth-child(2) div.andes-carousel-snapped__wrapper div.andes-carousel-snapped__slide.andes-carousel-snapped__slide--active:nth-child(1) a.ui-search-link > img.ui-search-result-image__element.shops__image-element"));
+        WebElement elementProd = driver.findElement(By.cssSelector("div.ui-search.shops__ui-main div.ui-search-main.ui-search-main--only-products.ui-search-main--with-topkeywords.shops__search-main:nth-child(4) section.ui-search-results.ui-search-results--without-disclaimer.shops__search-results ol.ui-search-layout.ui-search-layout--grid:nth-child(8) li.ui-search-layout__item:nth-child(1) div.ui-search-result__wrapper.shops__result-wrapper div.andes-card.andes-card--flat.andes-card--default.ui-search-result.shops__cardStyles.ui-search-result--core.andes-card--padding-default.andes-card--animated div.ui-search-result__image.shops__picturesStyles section.andes-carousel-snapped__container.andes-carousel-snapped__container--full.andes-carousel-snapped__container--with-controls.andes-carousel-snapped__container--arrows-visible div.andes-carousel-snapped__controls-wrapper div.andes-carousel-snapped.ui-search-result__card.andes-carousel-snapped--scroll-hidden:nth-child(2) div.andes-carousel-snapped__wrapper div.andes-carousel-snapped__slide.andes-carousel-snapped__slide--active:nth-child(1) a.ui-search-link > img.ui-search-result-image__element.shops__image-element"));
         elementProd.click();
 
         Thread.sleep(1000);
@@ -77,7 +70,7 @@ public class Test001 {
 
         Thread.sleep(1000);
 
-        WebElement comprarBtn = driver.findElement(By.cssSelector("div.ui-pdp:nth-child(2) div.ui-pdp-container.ui-pdp-container--pdp:nth-child(3) div.ui-pdp-container__row.ui-pdp--relative.ui-pdp-with--separator--fluid.pb-40:nth-child(1) div.ui-pdp-container__col.col-1.ui-pdp-container--column-right.mt-16.pr-16:nth-child(2) div.ui-pdp--sticky-wrapper.ui-pdp--sticky-wrapper-right div.ui-pdp-container__row:nth-child(1) form.ui-pdp-buybox div.ui-pdp-actions:nth-child(5) div.ui-pdp-actions__container.ui-pdp-actions__container--one-element button.andes-button.andes-spinner__icon-base.andes-button--loud:nth-child(1) > span.andes-button__content"));
+        WebElement comprarBtn = driver.findElement(By.cssSelector("div.ui-pdp:nth-child(2) div.ui-pdp-container.ui-pdp-container--pdp:nth-child(3) div.ui-pdp-container__row.ui-pdp--relative.ui-pdp-with--separator--fluid.pb-40:nth-child(1) div.ui-pdp-container__col.col-1.ui-pdp-container--column-right.mt-16.pr-16:nth-child(2) div.ui-pdp--sticky-wrapper.ui-pdp--sticky-wrapper-right div.ui-pdp-container__row:nth-child(1) form.ui-pdp-buybox div.ui-pdp-actions:nth-child(6) div.ui-pdp-actions__container.ui-pdp-actions__container--one-element button.andes-button.andes-spinner__icon-base.andes-button--loud:nth-child(1) > span.andes-button__content"));
         comprarBtn.click();
 
 
@@ -94,8 +87,6 @@ public class Test001 {
 
         //WebElement locatorInputCP = driver.findElement(locatorInputCP);
         //locatorInputCP.sendKeys("12345");
-
-
 
 
     }
