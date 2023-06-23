@@ -1,4 +1,4 @@
-package CrisVargas;
+package CrisVargas.ejemplos;
 
 
 import bc13repasos4selenium.App;

@@ -1,4 +1,4 @@
-package CrisVargas;
+package CrisVargas.ejemplos;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -7,12 +7,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+
+import javax.xml.xpath.XPath;
 import java.util.concurrent.TimeUnit;
 
-public class Test001 {
+public class  Test001 {
 
     private WebDriver driver;
     private JavascriptExecutor js = (JavascriptExecutor) driver;
+
 
     @BeforeAll
     static void preparacionClas(){
@@ -70,8 +74,11 @@ public class Test001 {
 
         Thread.sleep(1000);
 
-        WebElement comprarBtn = driver.findElement(By.cssSelector("div.ui-pdp:nth-child(2) div.ui-pdp-container.ui-pdp-container--pdp:nth-child(3) div.ui-pdp-container__row.ui-pdp--relative.ui-pdp-with--separator--fluid.pb-40:nth-child(1) div.ui-pdp-container__col.col-1.ui-pdp-container--column-right.mt-16.pr-16:nth-child(2) div.ui-pdp--sticky-wrapper.ui-pdp--sticky-wrapper-right div.ui-pdp-container__row:nth-child(1) form.ui-pdp-buybox div.ui-pdp-actions:nth-child(6) div.ui-pdp-actions__container.ui-pdp-actions__container--one-element button.andes-button.andes-spinner__icon-base.andes-button--loud:nth-child(1) > span.andes-button__content"));
-        comprarBtn.click();
+        WebElement btnComprar = driver.findElement(By.xpath("//span[contains(text(),'Comprar ahora')]"));
+        btnComprar.click();
+
+        //WebElement comprarBtn = driver.findElement(By.cssSelector("div.ui-pdp:nth-child(2) div.ui-pdp-container.ui-pdp-container--pdp:nth-child(3) div.ui-pdp-container__row.ui-pdp--relative.ui-pdp-with--separator--fluid.pb-40:nth-child(1) div.ui-pdp-container__col.col-1.ui-pdp-container--column-right.mt-16.pr-16:nth-child(2) div.ui-pdp--sticky-wrapper.ui-pdp--sticky-wrapper-right div.ui-pdp-container__row:nth-child(1) form.ui-pdp-buybox div.ui-pdp-actions:nth-child(6) div.ui-pdp-actions__container.ui-pdp-actions__container--one-element button.andes-button.andes-spinner__icon-base.andes-button--loud:nth-child(1) > span.andes-button__content"));
+        //comprarBtn.click();
 
 
 
